@@ -1,5 +1,5 @@
-export default function Flecha_derecha() {
+export default function Flecha_derecha({onClick}) {
   return (
-    <p className="flechas">&gt;</p>
+    <p className="flechas" onClick={onClick} >&gt;</p>
   )
 }

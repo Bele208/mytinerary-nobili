@@ -1,21 +1,9 @@
-import Navbar from "./components/Navbar"
-import Text_home from "./components/Text_home"
-import Btn_more from "./components/btn-more"
-import Carrusel from "./components/Carrusel"
+import Home from "/src/pages-1/Home"
+
 function App() {
   return (
-    <>
-    <Navbar />
-    <div className="cont-carrusel">
-      <div className="cont-index">
-        <Text_home/>
-        <Btn_more/>
-      </div>
-      <Carrusel/>
-    </div>
-    </>
-    
-  )
+    <Home />
+  );
 }
 
-export default App
+export default App;
