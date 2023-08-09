@@ -1,8 +1,9 @@
-export default function Cards({src, alt, text}) {
+import { Link as Anchor} from "react-router-dom"
+export default function Cards({src, alt, text, id}) {
   return (
-    <div className="unique-card">
+    <Anchor to={'/city/'+id}  className="unique-card">
            <img src={src} alt={alt} />
            <p>{text}</p>
-    </div>
+    </Anchor>
   )
 }
