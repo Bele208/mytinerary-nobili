@@ -5,7 +5,7 @@ export default function Navbar() {
             <Anchor to='/home'>
                 <img src="/public/logo-MT.png" alt="" height={50} />
                 {/* <h1>My Tinerary</h1> */}
-                {/* <p className="text-header">"Find your perfect trip, designed by insiders
+                {/* <p className="text-Header-footer">"Find your perfect trip, designed by insiders
             who know and love their cities!</p> */}
             </Anchor>
 

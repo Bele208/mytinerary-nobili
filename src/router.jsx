@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import Home from "./pages-1/home";
-import Header from "./layouts/header";
+import Header_footer from "./layouts/Header_footer";
 import Cities from "./pages-1/cities";
 import Details from "./pages-1/Details";
 
@@ -8,7 +8,7 @@ import Details from "./pages-1/Details";
 const router = createBrowserRouter([
     {
         path: '/',
-        element: <Header />,
+        element: <Header_footer />,
         children: [
             { path: '/', element: <Home />},  
             { path: '/home', element: <Home />},
