@@ -24,6 +24,9 @@ header {
   color: #000000;
   text-decoration: inherit;
 }
+.menu{
+  font-size: 25px;
+}
 
 header h1 {
   font-size: 30px;
@@ -39,7 +42,7 @@ header h1 {
   padding: 10px 0 10px 0;
 }
 
-.login-inicio {
+.login-inicio, .login-responsive {
   height: 35px;
   text-align: center;
   color: #ffffff;
@@ -74,7 +77,7 @@ header h1 {
   color: #ffffff;
 }
 .btn-more:hover{
-  background-color: #d76cd7;
+  background-color: #8a86dd;
 }
 .cont-index {
   margin: 150px;
@@ -101,6 +104,8 @@ header h1 {
 }
 
 .cont-father {
+  display: flex;
+  align-items: center;
   text-align: center;
 }
 
@@ -140,17 +145,54 @@ header h1 {
 }
 
 .footer {
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   position: fixed;
   bottom: 0;
   width: 100%;
   height: 50px;
   background-color: #f0f0f0;
 }
+.footer a{
+  color: #8f8c8c;
+  text-decoration: none;
+  padding: 3px;
+  margin: 5px;
+}
+.footer p{
+  color: #8f8c8c;
+  margin: 5px;
+}
+.img-construction {
+  display: flex;
+  justify-content: center;
+
+}
+.img-construction img{
+  height: 350px;
+}
+.login-responsive{
+  display: none;
+}
+.text-phrase{
+  text-align: center;
+}
+.text-phrase h1{
+  font-size: 1.5rem;
+  font-style: italic;
+  color: #716eb3;
+}
+.menu{
+  display: none;
+}
+.cont-main-carrusel{
+  text-align: center;
+}
 
 
 /* Media queries */
-@media only screen and (min-width: 320px) and (max-width: 767px) {
+@media only screen and (min-width: 320px) and (max-width: 768px) {
   .text-header {
     display: none;
   }
@@ -161,19 +203,27 @@ header h1 {
   }
 
   .text-home {
-    width: 65%;
+    width: 98%;
+  }
+  .text-phrase h1, .text-home h2 {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  .text-home p{
+    font-size: 1.1rem;
+    text-align: start;
   }
 
   .cont-index {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     margin: 15%;
   }
 
   .carrusel-img img {
-    height: 80px;
-  }
-
-  .cont-father h2 {
-    display: none;
+    height: 60px;
   }
 
   .cont-responsive {
@@ -181,4 +231,37 @@ header h1 {
     justify-content: center;
     align-items: center;
   }
+  .login-responsive{
+    display: block;
+    width: 30px;
+    border-radius: 100%;
+  }
+  .user-logo{
+    padding-right: 0px;
+  }
+  .menu-hidden{
+    display: none;
+  }
+  .menu{
+    display: block;
+  }
+  .cont-resp{
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+  }
+  .cont-anchor{
+    display: flex;
+  }
+  .footer{
+    display: none;
+  }
+  .btn-more{
+    margin: 20px;
+    align-items: center;
+  }
+  .img-construction img{
+    height: 240px;
+  }
+  
 }
