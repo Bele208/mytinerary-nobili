@@ -1,5 +1,9 @@
+import Img_construction from "../components/Img_construction";
+
 export default function Cities() {
   return (
-    <h2>Page under construction</h2>
+    <div>
+      < Img_construction />
+    </div>
   )
 }

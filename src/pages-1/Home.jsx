@@ -17,8 +17,13 @@ const [data, setData] = useState ([])
     )
   return (
     <>
-    
+    <div className="text-phrase">
+      <h1>Find your perfect trip, designed by insiders
+      who know and love their cities!</h1>
+    </div>
+
     <div className="cont-carrusel">
+
       <div className="cont-index">
         <Text_home/>
         <Btn_more/>
