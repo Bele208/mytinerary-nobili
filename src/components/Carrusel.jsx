@@ -35,7 +35,7 @@ export default function Carrusel({ data }) {
 
           <div className="carrusel-img">
             {data.slice(counter, counterTo).map((each, index) => (
-              <Cards key={index} src={each.photo} alt={each.city} text={each.city} id={each.id} />
+              <Cards key={index} src={each.photo} alt={each.city} text={each.city} id={each._id} />
             ))}
           </div>
 
