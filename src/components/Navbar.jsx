@@ -5,7 +5,7 @@ export default function Navbar() {
     return (
         <header>
             <Anchor to='/home'>
-                <img src="/public/logo-MT.png" alt="" height={50} />
+                <img src="/logo-MT.png" alt="Logo My Tinerary" className="logo-mt"/>
             </Anchor>
             <div className="cont-resp">
                 <p className="menu" onClick={() => setShow(!show)}>☰</p>
