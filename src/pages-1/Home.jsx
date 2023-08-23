@@ -3,14 +3,15 @@ import Text_home from "../components/Text_home"
 import Btn_more from "../components/btn-more"
 import Carrusel from "../components/Carrusel"
 import axios from "axios"
+import apiUrl from "../apiUrl.js"
 
 export default function Home() {
 const [data, setData] = useState ([])
 
     useEffect(
       () => {
-        axios('/data.json')
-        .then(res=>setData(res.data))
+        axios(apiUrl+'cities/carrusel')
+        .then(res=>setData(res.data.data_carrusel))
         .catch(err=>console.log(err))
       },
       []
