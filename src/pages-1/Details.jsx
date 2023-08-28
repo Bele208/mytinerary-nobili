@@ -1,12 +1,14 @@
 import { useEffect, useState } from "react";
 import { Link as Anchor, useParams } from "react-router-dom";
 import Card_details from "../components/Card_details";
+import Itineraries_details from "../components/Itineraries_details";
 import axios from "axios";
 import apiUrl from "../apiUrl";
 
 export default function Details() {
   const { city_id } = useParams();
   const [cityData, setCityData] = useState(null);
+  const [showAdditionalSection, setShowAdditionalSection] = useState(false);
 
   useEffect(() => {
     axios.get(apiUrl + '/cities/' + city_id)
@@ -30,7 +32,17 @@ export default function Details() {
         />
       )}
 
-      <Anchor to={'/cities/'}>Back to cities</Anchor>
+      <Anchor to={'/allcities/'}>Back to cities</Anchor>
+
+      <button className="view-itineraries" onClick={() => setShowAdditionalSection(!showAdditionalSection)}>
+        View Itineraries ↓
+      </button>
+
+      {showAdditionalSection && (
+        <div>
+          <Itineraries_details/>
+        </div>
+      )}
     </div>
   );
 }
