@@ -20,7 +20,7 @@ export default function Itineraries_card() {
                     <div>
                         <p>Lorem, ipsum dolor sit amet</p>
                         <p>Lorem, ipsum dolor sit amet</p>
-                        <p>Lorem, ipsum dolor sit amet</p>
+                        
                     </div>
                 )}
             </div>
