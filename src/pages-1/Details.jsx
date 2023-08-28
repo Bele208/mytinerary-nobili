@@ -30,7 +30,7 @@ export default function Details() {
         />
       )}
 
-      <Anchor to={'/cities/'}>Back to cities</Anchor>
+      <Anchor to={'/allcities/'}>Back to cities</Anchor>
     </div>
   );
 }

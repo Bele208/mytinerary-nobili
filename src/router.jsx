@@ -4,6 +4,9 @@ import Header_footer from "./layouts/Header_footer";
 
 import Details from "./pages-1/Details";
 import Cities from "./pages-1/cities";
+import SignIn from "./pages-1/SignIn";
+import SignUp from "./pages-1/SignUp";
+
 
 const router = createBrowserRouter([
     {
@@ -13,10 +16,11 @@ const router = createBrowserRouter([
             { path: '/', element: <Home />},  
             { path: '/home', element: <Home />},
             { path: '/index', element: <Home />},
-            { path: '/cities', element: <Cities/>},
-            { path: '/cities/:city_id', element: <Details/>}
+            { path: '/allcities', element: <Cities/>},
+            { path: '/cities/:city_id', element: <Details/>},
+            { path: '/auth/signin', element: < SignIn /> },
+            { path: '/auth/signup', element: < SignUp /> }
         ],
-
 
     }
 

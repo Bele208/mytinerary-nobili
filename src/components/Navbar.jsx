@@ -13,12 +13,12 @@ export default function Navbar() {
                     <div className="content-ref cont-anchor">
                         <div>
                             <Anchor to='/home' >Home</Anchor>
-                            <Anchor to='/cities' >Cities</Anchor>
+                            <Anchor to='/allcities' >Cities</Anchor>
                         </div>
-                    <div>
-
-                    </div>
-                        <button className="login-responsive"><img src="/user.png" alt="user" className="user-logo" /></button>
+                        <Anchor to='/auth/signup' >
+                            <button className="login-responsive"><img src="/user.png" alt="user" className="user-logo" /></button>
+                        </Anchor>
+                        
                     </div>
                 ) : (null)}
             </div>
@@ -26,8 +26,10 @@ export default function Navbar() {
 
             <div className="content-ref menu-hidden">
                 <Anchor to='/home' >Home</Anchor>
-                <Anchor to='/cities' >Cities</Anchor>
+                <Anchor to='/allcities' >Cities</Anchor>
+                <Anchor to='/auth/signin' >
                 <button className="login-inicio"><img src="/user.png" alt="user" className="user-logo" /> Login</button>
+                </Anchor>
             </div>
         </header>
     )
