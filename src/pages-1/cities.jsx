@@ -1,7 +1,15 @@
+//REVISAR Y ARREGLAR ESTE CÓDIGO PARA PODER UTILIZAR REDUX
+//REVISAR Y ARREGLAR ESTE CÓDIGO PARA PODER UTILIZAR REDUX
+//REVISAR Y ARREGLAR ESTE CÓDIGO PARA PODER UTILIZAR REDUX
+
 import { useEffect, useState, useRef } from "react";
 import Cards_cities from "../components/Cards_cities";
-import axios from "axios";
+import { useSelector } from "react-redux";
+import city_actions from "../store/actions/cities";
+import axios from "axios"
 import apiUrl from "../apiUrl";
+const { read_cities } = city_actions
+
 
 export default function Cities() {
   const [cities, setCities] = useState([]);

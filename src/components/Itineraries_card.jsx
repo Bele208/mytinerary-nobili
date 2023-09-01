@@ -9,18 +9,16 @@ export default function Itineraries_card() {
 
                 <div className="itinery-detail">
                     <button>♡</button>
-                    <button onClick={() => setShowAdditionalSection(!showAdditionalSection)}>
-                        v
-                    </button>
-
+                    <button onClick={() => setShowAdditionalSection(!showAdditionalSection)}>{showAdditionalSection ? ('▲') : ('▼')} </button>
                 </div>
 
 
                 {showAdditionalSection && (
                     <div>
-                        <p>Lorem, ipsum dolor sit amet</p>
-                        <p>Lorem, ipsum dolor sit amet</p>
-                        
+                        <p>Under construction </p>
+                        <p>Under construction </p>
+                        <p>Under construction </p>
+                        <p>Under construction </p>
                     </div>
                 )}
             </div>

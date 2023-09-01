@@ -2,17 +2,20 @@ import { useEffect, useState } from "react"
 import Text_home from "../components/Text_home"
 import Btn_more from "../components/btn-more"
 import Carrusel from "../components/Carrusel"
-import axios from "axios"
-import apiUrl from "../apiUrl.js"
+import { useSelector, useDispatch } from "react-redux"
+import city_actions from "../store/actions/cities"
+const { read_carrusel } = city_actions
 
 export default function Home() {
-const [data, setData] = useState ([])
+
+const carrusel = useSelector(store=>store.cities.carrusel)
+const dispatch = useDispatch()
 
     useEffect(
       () => {
-        axios(apiUrl+'cities/carrusel')
-        .then(res=>setData(res.data.data_carrusel))
-        .catch(err=>console.log(err))
+        if (carrusel.length===0){
+          dispatch (read_carrusel())
+        }
       },
       []
     )
@@ -29,7 +32,7 @@ const [data, setData] = useState ([])
         <Text_home/>
         <Btn_more/>
       </div>
-     <Carrusel data={data} />
+     <Carrusel data={carrusel} />
     </div>
     </>
   )

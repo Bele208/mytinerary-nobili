@@ -2,41 +2,39 @@ import { useEffect, useState } from "react";
 import { Link as Anchor, useParams } from "react-router-dom";
 import Card_details from "../components/Card_details";
 import Itineraries_details from "../components/Itineraries_details";
-import axios from "axios";
-import apiUrl from "../apiUrl";
+import city_actions from "../store/actions/cities";
+import { useDispatch, useSelector } from "react-redux";
+const { read_city } = city_actions;
 
 export default function Details() {
   const { city_id } = useParams();
-  const [cityData, setCityData] = useState(null);
+  const dispatch = useDispatch();
   const [showAdditionalSection, setShowAdditionalSection] = useState(false);
+  const city = useSelector(store => store.cities.city);
+  console.log(city_id)
+ 
 
-  useEffect(() => {
-    axios.get(apiUrl + '/cities/' + city_id)
-      .then(res => {
-        const city = res.data.response;
-        setCityData(city);
-      })
-      .catch(err => console.log(err));
-  }, [city_id]);
-
-  return (
+  useEffect(
+    () => {
+      dispatch(read_city({id: city_id}));
+    }, []);
+    
+    return (
     <div className="details-cont">
-      {cityData && (
+      {city_id && (
         <Card_details
-          key={cityData._id}
-          src={cityData.photo}
-          alt={cityData.city}
-          text={cityData.city}
-          description={cityData.description}
-          id={cityData._id}
+          key={city_id}
+          src={city.photo}
+          alt={city.city}
+          text={city.city}
+          description={city.description}
+          id={city_id}
         />
       )}
 
       <Anchor to={'/allcities/'}>Back to cities</Anchor>
 
-      <button className="view-itineraries" onClick={() => setShowAdditionalSection(!showAdditionalSection)}>
-        View Itineraries ↓
-      </button>
+      <button className="view-itineraries" onClick={() => setShowAdditionalSection(!showAdditionalSection)}>{showAdditionalSection ? ('Close Itineraries ↑') : ('View Itineraries ↓')}</button>
 
       {showAdditionalSection && (
         <div>

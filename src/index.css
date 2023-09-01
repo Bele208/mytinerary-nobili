@@ -325,14 +325,16 @@ header h1 {
   cursor: pointer;
 }
 .cards-details{
+  width: 90%;
   text-align: center;
 }
 .cards-details p{
   margin: 20px 30px 10px 30px;
 }
 .cards-details img{
-  margin: 20px;
+  margin: 10px;
   height: 250px;
+  max-width: 100%;
   border-radius: 5px;
 }
 
