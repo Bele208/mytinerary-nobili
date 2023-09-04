@@ -1,6 +1,4 @@
-//REVISAR Y ARREGLAR ESTE CÓDIGO PARA PODER UTILIZAR REDUX
-//REVISAR Y ARREGLAR ESTE CÓDIGO PARA PODER UTILIZAR REDUX
-//REVISAR Y ARREGLAR ESTE CÓDIGO PARA PODER UTILIZAR REDUX
+//REVISAR Y APLICAR REDUX
 
 import { useEffect, useState, useRef } from "react";
 import Cards_cities from "../components/Cards_cities";
@@ -61,7 +59,7 @@ export default function Cities() {
       {firstLoad && isLoading && <div id="loader"></div>}
       {!isLoading && cities.length === 0 && !firstLoad ? (
         <div className="no-matches">
-          <h2>No matches, try another word!</h2>
+          <h2>No results found for "{text.current.value}", try again with other words</h2>
           <img src="/travolta-lost.gif" alt="Travolta Gif" />
         </div>
       ) : (

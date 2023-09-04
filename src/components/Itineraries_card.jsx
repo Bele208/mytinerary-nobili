@@ -1,28 +1,48 @@
-import { useEffect, useState } from "react";
-export default function Itineraries_card() {
-    const [showAdditionalSection, setShowAdditionalSection] = useState(false);
-    return (
-        <>
-            <div className="itineray-card">
-                <h3>Itinerary Title</h3>
-                <img src="/page-construction.png" alt="" />
+// import { useEffect, useState } from "react";
+// import InfoUser from "./InfoUser";
 
-                <div className="itinery-detail">
-                    <button>♡</button>
-                    <button onClick={() => setShowAdditionalSection(!showAdditionalSection)}>{showAdditionalSection ? ('▲') : ('▼')} </button>
-                </div>
+// export default function Itineraries_card() {
+//     const [showAdditionalSection, setShowAdditionalSection] = useState(false);
 
+//     return (
+//         <>
+//             <div className="itinerary-card">
+//                 <h3>Itinerary Title</h3>
+//                 <img src="/img/europe/roma.jpg" alt="" />
 
-                {showAdditionalSection && (
-                    <div>
-                        <p>Under construction </p>
-                        <p>Under construction </p>
-                        <p>Under construction </p>
-                        <p>Under construction </p>
-                    </div>
-                )}
-            </div>
-        </>
+//                 <div className="itinerary-detail">
+//                     <button>♡</button>
+//                     <button onClick={() => setShowAdditionalSection(!showAdditionalSection)}>{showAdditionalSection ? ('▲') : ('▼')} </button>
+//                 </div>
 
-    );
-}
+//                 <div className="info-user">
+//                     <div className='img-user'>
+//                         <h4>User:</h4>
+//                         <img src="/user.png" alt="Imagen de usuario" />
+//                         <p>Nombre</p>
+//                     </div>
+//                     <div>
+//                         <h4>Hashtags:</h4>
+//                         <p>#Hashtags</p>
+//                     </div>
+//                     <div>
+//                         <h4>Duration:</h4>
+//                         <p>00:00</p>
+//                     </div>
+//                     <div>
+//                         <h4>Price:</h4>
+//                         <p>$$$</p>
+//                     </div>
+//                 </div>
+
+//                 {showAdditionalSection && (
+
+//                     <div className="itinerary-description">
+//                         < InfoUser />
+//                     </div>
+//                 )}
+//             </div>
+//         </>
+
+//     );
+// }
