@@ -1,7 +1,13 @@
+//REVISAR Y APLICAR REDUX
+
 import { useEffect, useState, useRef } from "react";
 import Cards_cities from "../components/Cards_cities";
-import axios from "axios";
+import { useSelector } from "react-redux";
+import city_actions from "../store/actions/cities";
+import axios from "axios"
 import apiUrl from "../apiUrl";
+const { read_cities } = city_actions
+
 
 export default function Cities() {
   const [cities, setCities] = useState([]);
@@ -53,7 +59,7 @@ export default function Cities() {
       {firstLoad && isLoading && <div id="loader"></div>}
       {!isLoading && cities.length === 0 && !firstLoad ? (
         <div className="no-matches">
-          <h2>No matches, try another word!</h2>
+          <h2>No results found for "{text.current.value}", try again with other words</h2>
           <img src="/travolta-lost.gif" alt="Travolta Gif" />
         </div>
       ) : (
