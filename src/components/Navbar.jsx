@@ -1,12 +1,16 @@
 import { useState } from "react"
 import { Link as Anchor } from "react-router-dom"
+import { useSelector } from "react-redux"
 export default function Navbar() {
     let [show, setShow] = useState(false)
+    let name = useSelector(store=>store.users.user.name)
+    let lastName = useSelector(store=>store.users.user?.lastName)
     return (
         <header>
             <Anchor to='/home'>
                 <img src="/logo-MT.png" alt="Logo My Tinerary" className="logo-mt"/>
             </Anchor>
+            <p>Hi! {name} {lastName} </p>
             <div className="cont-resp">
                 <p className="menu" onClick={() => setShow(!show)}>☰</p>
                 {show ? (
@@ -15,7 +19,7 @@ export default function Navbar() {
                             <Anchor to='/home' >Home</Anchor>
                             <Anchor to='/allcities' >Cities</Anchor>
                         </div>
-                        <Anchor to='/auth/signup' >
+                        <Anchor to='/auth/signin' >
                             <button className="login-responsive"><img src="/user.png" alt="user" className="user-logo" /></button>
                         </Anchor>
                         

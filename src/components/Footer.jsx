@@ -1,7 +1,7 @@
 import { Link as Anchor } from "react-router-dom"
 export default function Footer() {
   return (
-    <div className="footer">
+    <footer className="footer">
       <div>
         <p>MyTinerary</p>
         <p>Find your perfect trip!</p>
@@ -13,6 +13,6 @@ export default function Footer() {
       {/* <p>All rights reserved</p> */}
       </div>
 
-    </div>
+    </footer>
   )
 }
