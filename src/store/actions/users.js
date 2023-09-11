@@ -12,7 +12,7 @@ const signin = createAsyncThunk(
             return {
                 user: data.data.response.user,
                 token: data.data.response.token,
-                // messages: []
+                messages: []
             }
         } catch (error) {
             console.log(error);
@@ -48,5 +48,28 @@ const signin_token = createAsyncThunk(
     }
 )
 
-const user_actions = {signin, signin_token}
+const signout_token = createAsyncThunk(
+    'signout_token',
+    async()=> {
+        try {
+            let token = localStorage.getItem('token')
+            let authorization = { headers:{ 'Authorization':`Bearer ${token}` } }
+            let data = await axios.post(apiUrl+'auth/signout',null,authorization)
+            console.log(data);
+            localStorage.removeItem('token')
+            return {
+                user: {},
+                token: ''
+            }
+        } catch (error) {
+            console.log(error);
+            return {
+                user: {},
+                token: ''
+            }
+        }
+    }
+)
+
+const user_actions = {signin, signin_token, signout_token}
 export default user_actions
