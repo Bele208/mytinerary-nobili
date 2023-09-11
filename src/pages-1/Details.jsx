@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link as Anchor, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import Card_details from "../components/Card_details";
 import city_actions from "../store/actions/cities";
 import { useDispatch, useSelector } from "react-redux";
@@ -20,7 +20,6 @@ export default function Details() {
     return (
     <div className="details-cont">      
     
-    <Anchor to={'/allcities/'}>Back to cities</Anchor>
       {city_id && (
         <Card_details
           key={city_id}
@@ -31,7 +30,7 @@ export default function Details() {
           id={city_id}
         />
       )}
-
+      
     </div>
   );
 }

@@ -1,7 +1,9 @@
+import Logos from "../components/Logos"
 import { useRef , useState } from "react"
 import axios from "axios"
 import apiUrl from "../apiUrl"
 import { Link as Anchor } from "react-router-dom"
+
 
 export default function SignUp() {
     const name =useRef()
@@ -35,15 +37,15 @@ export default function SignUp() {
         <form className="form-up">
             <h3>Create account</h3>
             <p>Already have an account? <Anchor to={'/auth/signin'} >Sign in</Anchor></p>
-        <input ref={name} type="text" name="name" id="name" placeholder="Name" />
-        <input ref={lastName} type="text" name="lastName" id="lastName" placeholder="Last Name" />
-        <input ref={mail} type="text" name="mail" id="mail" placeholder="Mail" />
-        <input ref={password} type="password" name="password" id="password" placeholder="Password" />
-        <input ref={country} type="text" name="country" id="country" placeholder="Country" />
-        <input ref={photo} type="text" name="photo" id="photo" placeholder="Photo" />
-        <input type="button" value="Sign Up!" onClick={handleSignUP}/>
-
-    </form>
+            <input ref={name} type="text" name="name" id="name" placeholder="Name" />
+            <input ref={lastName} type="text" name="lastName" id="lastName" placeholder="Last Name" />
+            <input ref={mail} type="text" name="mail" id="mail" placeholder="Mail" />
+            <input ref={password} type="password" name="password" id="password" placeholder="Password" />
+            <input ref={country} type="text" name="country" id="country" placeholder="Country" />
+            <input ref={photo} type="text" name="photo" id="photo" placeholder="Photo" />
+            <input type="button" value="Sign Up!" onClick={handleSignUP}/>
+        < Logos />
+        </form>
 </div>
 ) 
 
