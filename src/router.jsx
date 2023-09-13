@@ -3,9 +3,10 @@ import Home from "./pages-1/Home";
 import Header_footer from "./layouts/Header_footer";
 
 import Details from "./pages-1/Details";
-import Cities from "./pages-1/cities";
+import Cities from "./pages-1/Cities";
 import SignIn from "./pages-1/SignIn";
 import SignUp from "./pages-1/SignUp";
+import Profile from "./pages-1/Profile";
 
 
 const router = createBrowserRouter([
@@ -19,7 +20,8 @@ const router = createBrowserRouter([
             { path: '/allcities', element: <Cities/>},
             { path: '/cities/:city_id', element: <Details/>},
             { path: '/auth/signin', element: < SignIn /> },
-            { path: '/auth/signup', element: < SignUp /> }
+            { path: '/auth/signup', element: < SignUp /> },
+            { path: "/profile", element: <Profile /> },
         ],
 
     }

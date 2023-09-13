@@ -34,6 +34,10 @@ header {
   }
 
 }
+.content-ref{
+  display: flex;
+  align-items: center;
+}
 
 .content-ref a {
   padding-right: 15px;
@@ -270,6 +274,10 @@ footer {
   border: 1px solid #4F46E5;
   border-radius: 4px;
 }
+.back-to-cities{
+  display: flex;
+  align-items: stretch;
+}
 
 .cont-cards {
   margin: 10px 0 80px 0;
@@ -279,6 +287,97 @@ footer {
   flex-direction: row;
 
 }
+.card-profile {
+  color: #ffffff;
+  padding: 10px;
+  margin: 20px;
+  background-color: #4e46e596;
+  text-align: center;
+  border:1px solid #4F46E5;
+  border-radius: 10px;
+  width: 300px;
+
+}
+.card-profile img{
+  height: 160px;
+  border-radius: 100%;
+}
+.card-profile button{
+  color: #000000;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px;
+  margin: 10px;
+  width: 200px;
+  cursor: pointer;
+}
+.cont-profile{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-profile-update{
+  color: #ffffff;
+  padding: 10px ;
+  margin: 20px 20px 70px 20px;
+  background-color: #4e46e596;
+  text-align: center;
+  border:1px solid #4F46E5;
+  border-radius: 10px;
+  width: 300px;
+
+}
+.card-profile-update img{
+  height: 160px;
+  border-radius: 10px;
+}
+.form-update{
+  margin: 10px;
+  width:95% ;
+}
+
+.cont-profile-nav {
+  position: relative;
+  display: inline-block;
+}
+
+.img-user {
+  cursor: pointer;
+}
+
+.show_profile{
+  position: absolute;
+  top: 40px; 
+  right: 0; 
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  display: none;
+}
+
+.show_profile.active {
+  display: block;
+}
+
+.show_profile a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #333;
+}
+
+.show_profile a:hover {
+  background-color: #eee; 
+}
+.profile-nav-responsive img{
+  border-radius: 100%;
+  height: 30px;
+  width: 30px;
+}
+
 
 /* LOADER */
 
@@ -347,12 +446,11 @@ footer {
   margin-bottom: 60px;
 }
 
-
 .view-itineraries, .back-cities {
   text-align: center;
   color: #ffffff;
   background-color: #8a86dd;
-
+  font-size: 16px;
   margin: 20px 5px 20px 5px;
   text-decoration: none;
   border: 1px solid #4F46E5;
@@ -366,7 +464,8 @@ footer {
   cursor: pointer;
 }
 .back-cities{
-  padding: 7px;
+  width: 150px;
+  padding: 6px;
 }
 
 .cards-details {
@@ -558,6 +657,21 @@ input[type="button"]:hover {
   margin: 10px;
   height: 30px;
 }
+.card-activities{
+  color: #ffffff;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ba8dfe;
+  background-color: #ddcbf7;
+  border-radius: 5px;
+}
+.card-activities img{
+  height: 200px;
+  border-radius: 5px;
+}
+.card-activities p{
+padding: 10px;
+}
 
 
 /* Barra de scroll */
@@ -647,7 +761,13 @@ body::-webkit-scrollbar-thumb {
   }
 
   .menu {
+    margin: 10px 15px 0 0;
+    position: absolute;
+    cursor: pointer;
     display: block;
+  }
+  .menu p{
+    position: relative;
   }
 
   .cont-resp {

@@ -8,9 +8,8 @@ export default function Footer() {
 
       </div>
       <div>
-      <Anchor to='/home' >Home</Anchor>
-      <Anchor to='/cities' >Cities</Anchor>
-      {/* <p>All rights reserved</p> */}
+        <Anchor to='/home' >Home</Anchor>
+        <Anchor to='/allcities' >Cities</Anchor>
       </div>
 
     </footer>
