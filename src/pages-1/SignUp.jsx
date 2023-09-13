@@ -3,6 +3,8 @@ import { useRef , useState } from "react"
 import axios from "axios"
 import apiUrl from "../apiUrl"
 import { Link as Anchor } from "react-router-dom"
+import Swal from 'sweetalert2';
+
 
 
 export default function SignUp() {
@@ -26,6 +28,12 @@ export default function SignUp() {
             apiUrl+'users/',
             data
         )
+        Swal.fire({
+          icon: 'success',
+          title: 'User Created!',
+          text: 'Your user account has been successfully created.',
+      })
+      navigate('/signin')
         console.log(data)
         } catch (error) {
           console.log(error)  
