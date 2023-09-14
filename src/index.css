@@ -628,14 +628,19 @@ form a {
   margin-bottom: 45px;
   height: 80%;
 }
+.form-up span{
 
+  width:70%;
+  display: flex;
+  align-items: center;
+}
 form h3 {
   padding: 8px;
 }
 
 input[type="text"],
 input[type="button"],
-input[type="password"] {
+input[type="password"], select {
   margin: 5px;
   padding: 7px;
   width: 65%;

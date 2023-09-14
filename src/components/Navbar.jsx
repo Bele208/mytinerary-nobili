@@ -40,7 +40,11 @@ export default function Navbar() {
             {user.mail ? (
                 <div className="profile-nav-responsive cont-profile-nav">
                     <Anchor to='#' className='img-user' onClick={() => setShowProfile(!showProfile)}>
-                        <img src={user.photo} alt="photo profile user" title={user.name} />
+                        {user.photo ? (
+                            <img src={user.photo} alt="photo profile user" title={user.name} />
+                         ) : (
+                            <img src="/user.png" alt="user" className="user-logo" />
+                        )}
                     </Anchor>
                     <div className={`show_profile${showProfile ? ' active' : ''}`}>
                         <Anchor to='/home' >Home</Anchor>
@@ -73,7 +77,11 @@ export default function Navbar() {
                     user.mail ? (
                         <div className="cont-profile-nav">
                             <Anchor to='#' className='img-user' onClick={() => setShowProfile(!showProfile)}>
-                                <img src={user.photo} alt="photo profile user" title={user.name} />
+                                {user.photo ? (
+                                    <img src={user.photo} alt="photo profile user" title={user.name} />
+                                ) : (
+                                    <img src="/user.png" alt="user" className="user-logo" />
+                                )}
                             </Anchor>
                             <div className={`show_profile${showProfile ? ' active' : ''}`}>
                                 <Anchor to='/profile'>Profile</Anchor>
