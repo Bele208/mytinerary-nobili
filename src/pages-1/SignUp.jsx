@@ -6,7 +6,7 @@ import { Link as Anchor } from "react-router-dom"
 import Swal from 'sweetalert2';
 
 
-
+const countries = ["Argentina", "Bolivia", "Brazil", "Chile", "Colombia", "Costa Rica", "Cuba", "Dominican Republic", "Ecuador", "El Salvador", "Guatemala", "Honduras", "Mexico", "Nicaragua", "Panama", "Paraguay", "Peru", "Puerto Rico", "Uruguay", "Venezuela"];
 export default function SignUp() {
     const name =useRef()
     const lastName =useRef() 
@@ -49,8 +49,14 @@ export default function SignUp() {
             <input ref={lastName} type="text" name="lastName" id="lastName" placeholder="Last Name" />
             <input ref={mail} type="text" name="mail" id="mail" placeholder="Mail" />
             <input ref={password} type="password" name="password" id="password" placeholder="Password" />
-            <input ref={country} type="text" name="country" id="country" placeholder="Country" />
             <input ref={photo} type="text" name="photo" id="photo" placeholder="Photo" />
+            <span>Country:
+                <select ref={country} id="country" name="country">
+                {countries.map((countryName) => (
+                  <option key={countryName} value={countryName}>{countryName}</option>))}
+                </select>
+            </span>
+
             <input type="button" value="Sign Up!" onClick={handleSignUP}/>
         < Logos />
         </form>
@@ -58,3 +64,5 @@ export default function SignUp() {
 ) 
 
 }
+
+
