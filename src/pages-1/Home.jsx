@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import Text_home from "../components/Text_home"
-import Btn_more from "../components/btn-more"
+import Btn_more from "../components/Btn-more-cities"
 import Carrusel from "../components/Carrusel"
 import { useSelector, useDispatch } from "react-redux"
 import city_actions from "../store/actions/cities"
