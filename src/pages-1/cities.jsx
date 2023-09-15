@@ -5,7 +5,7 @@ import Cards_cities from "../components/Cards_cities";
 import { useSelector } from "react-redux";
 import city_actions from "../store/actions/cities";
 import axios from "axios"
-import apiUrl from "../apiUrl";
+import apiUrl from "../../apiUrl";
 const { read_cities } = city_actions
 
 

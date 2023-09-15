@@ -1,7 +1,7 @@
 import Logos from "../components/Logos"
 import { useRef , useState } from "react"
 import axios from "axios"
-import apiUrl from "../apiUrl"
+import apiUrl from "../../apiUrl"
 import { Link as Anchor } from "react-router-dom"
 import Swal from 'sweetalert2';
 
