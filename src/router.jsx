@@ -3,7 +3,8 @@ import Home from "./pages-1/Home";
 import Header_footer from "./layouts/Header_footer";
 
 import Details from "./pages-1/Details";
-import Cities from "./pages-1/Cities";
+// import Cities from "./pages-1/Cities";
+import Cities from "./pages-1/Cities.jsx"
 import SignIn from "./pages-1/SignIn";
 import SignUp from "./pages-1/SignUp";
 import Profile from "./pages-1/Profile";
