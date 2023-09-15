@@ -7,7 +7,7 @@ export default function Cards_cities({ src, alt, text, id }) {
       <img src={src} alt={alt} />
       <h3>{text}</h3>
 
-      <div className="btn-citie">
+      <div className="btn-citie" key={id}>
         <Anchor to={'/cities/' + id} >View More</Anchor>
       </div>
     </div>

@@ -66,7 +66,7 @@ export default function Cities() {
         <div className="cont-cards">
           {cities.map(each => (
             <Cards_cities
-              key={each.id}
+              key={each._id}
               src={each.photo}
               alt={each.city}
               text={each.city}
